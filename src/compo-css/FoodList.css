@@ -1,0 +1,21 @@
+.food-list {
+    padding: 20px;
+  }
+  
+  .food-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+  }
+  
+  .food-item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust based on number of items per row */
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .food-image {
+    max-width: 100%;
+    height: auto;
+  }
+  

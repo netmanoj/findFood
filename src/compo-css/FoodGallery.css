@@ -1,0 +1,44 @@
+/* FoodGallery.css */
+
+.food-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+  }
+  
+  .food-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .food-item h3 {
+    margin: 8px 0;
+    font-size: 1.2rem;
+  }
+  
+  .food-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .food-item button {
+    background-color: #1B4242;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .food-item button:hover {
+    background-color: #092635;
+  }
+  
