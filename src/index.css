@@ -1,22 +1,41 @@
 /* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color: #f0f2f5;
 }
 
 /* Header Styles */
 header {
   background-color: #092635;
-  color: white;
-  padding: 10px;
+  color: #ffffff;
+  padding: 15px;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
   margin: 0;
+  font-size: 2rem;
 }
 
 nav {
@@ -24,9 +43,10 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px;
+  font-size: 1rem;
 }
 
 nav a:hover {
@@ -36,12 +56,14 @@ nav a:hover {
 /* Food Gallery Styles */
 .food-gallery {
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .food-gallery h1 {
   text-align: center;
   color: #092635;
+  font-size: 1.8rem;
 }
 
 /* Food Item Styles */
@@ -49,51 +71,55 @@ nav a:hover {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .food-item h3 {
-  margin: 10px 0;
+  margin: 15px 0;
   color: #092635;
+  font-size: 1.2rem;
 }
 
 .food-item img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .food-item button {
-  background-color: #038C3E;
-  color: white;
+  background-color: #1B4242;
+  color: #ffffff;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 1rem;
 }
 
 .food-item button:hover {
-  background-color: #026f2e;
+  background-color: #092635;
 }
 
 /* Food Search Styles */
 .food-search {
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .food-search input {
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .food-search ul {
@@ -103,172 +129,178 @@ nav a:hover {
 }
 
 .food-search li {
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid #ddd;
   color: #092635;
+  font-size: 1rem;
 }
 
 /* Food List Styles */
 .food-list {
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.food-list h2 {
-  color: #092635;
-  margin-bottom: 20px;
-}
-
-.food-list .food-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.food-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.food-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.food-list span {
-  color: #092635;
-}
-
-.food-list button {
-  background-color: #038C3E;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.food-list button:hover {
-  background-color: #026f2e;
-}
-
-/* Cart Page Styles */
-.cart-page {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.cart-page h2 {
-  color: #092635;
-}
-
-.cart-page ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.cart-page li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.cart-page button {
-  background-color: #C8102E;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cart-page button:hover {
-  background-color: #a30a2a;
-}
-.food-list {
-  padding: 20px;
 }
 
 .food-items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px; /* Adjust gap between items as needed */
 }
 
-.food-item {
-  background: #f9f9f9; /* Light background for items */
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.food-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
+/* Button Styles */
 button {
   margin-top: 10px;
-  padding: 8px 12px;
+  padding: 12px 18px;
   border: none;
   background: #092635; /* Dark background color */
-  color: white;
-  border-radius: 4px;
+  color: #ffffff;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 button:hover {
   background: #1B4242; /* Darker color on hover */
 }
-
-
-.food-list {
-  padding: 20px;
+/*button center*/
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 10px; /* Adjust as needed */
 }
 
-.food-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.food-item {
-  background: #f9f9f9;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.food-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 8px 12px;
+.center-button {
+  padding: 12px 18px;
   border: none;
-  background: #092635;
-  color: white;
+  background: #092635; /* Dark background color */
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.center-button:hover {
+  background: #1B4242; /* Darker color on hover */
+}
+
+
+
+/* Checkout Form Styles */
+.checkout-form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.checkout-form h3 {
+  margin-bottom: 15px;
+  color: #092635;
+  font-size: 1.5rem;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form label {
+  margin-bottom: 8px;
+  color: #092635;
+  font-size: 1rem;
+}
+
+.checkout-form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.checkout-form button {
+  background-color: #092635;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.checkout-form button:hover {
+  background-color: #1B4242;
+}
+
+
+/*notification.css*/
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1B4242;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.notification.visible {
+  opacity: 1;
+}
+
+
+.about-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+
+
+/*cart fix*/
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.cart-item span {
+  flex: 1;
+}
+
+.remove-button {
+  background: #d9534f; /* Example red color for the remove button */
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 1rem; /* Adjust to position it slightly to the left */
 }
 
-button:hover {
-  background: #1B4242;
+.remove-button:hover {
+  background: #c9302c; /* Darker red on hover */
 }

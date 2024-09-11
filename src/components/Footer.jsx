@@ -1,5 +1,6 @@
 import React from 'react';
-import './Footer.css'; // Import CSS file for styling
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom for internal navigation
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -7,9 +8,9 @@ const Footer = () => {
       <div className="footer-content">
         <p>&copy; {new Date().getFullYear()} Food App. All rights reserved.</p>
         <nav className="footer-nav">
-          <a href="/">Home</a>
-          <a href="/cart">Cart</a>
-          <a href="/about">About</a>
+          <Link to="/">Home</Link> {/* Use Link for internal routing */}
+          <Link to="/cart">Cart</Link>
+          <Link to="/about">About</Link>
         </nav>
       </div>
     </footer>

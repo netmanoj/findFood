@@ -1,8 +1,21 @@
-.footer {
+/* Ensure footer is always at the bottom of the page */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
     background-color: #092635;
     color: #fff;
     padding: 20px;
     text-align: center;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom */
   }
   
   .footer-content {
